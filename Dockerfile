@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.4.0
+FROM rocker/tidyverse:4.2.1
 
 LABEL org.opencontainers.image.authors="jon.brate@fhi.no"
 
@@ -10,3 +10,4 @@ RUN apt-get update && apt-get -y upgrade && \
 # Install R packages
 RUN Rscript -e "install.packages('BiocManager')"
 RUN R -e 'BiocManager::install(c("Rsamtools", ask = F))'
+RUN R -e "install.packages('lubridate')"
