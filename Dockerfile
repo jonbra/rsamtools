@@ -11,3 +11,4 @@ RUN apt-get update && apt-get -y upgrade && \
 RUN Rscript -e "install.packages('BiocManager')"
 RUN R -e 'BiocManager::install(c("Rsamtools", ask = F))'
 RUN R -e "install.packages('lubridate')"
+RUN R -e "install.packages('phylotools')"
