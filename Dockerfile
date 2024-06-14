@@ -1,4 +1,4 @@
-FROM jonbra/tidyverse_seqinr:2.0
+FROM rocker/tidyverse:latest
 
 LABEL org.opencontainers.image.authors="jon.brate@fhi.no"
 
